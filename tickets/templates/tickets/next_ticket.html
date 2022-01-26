@@ -1,0 +1,8 @@
+{% extends 'tickets/layout.html' %}
+{% block body %}
+{% if not ticket.id %}
+    <div>Waiting for the next client</div>
+{% else %}
+    <div>Next ticket #{{ticket.id}}</div>
+{% endif %}
+{% endblock %}

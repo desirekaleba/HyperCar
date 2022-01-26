@@ -1,0 +1,10 @@
+{% extends "tickets/layout.html" %}
+{% block body %}
+  <div>Change oil queue: {{que.change_oil|length}}</div>
+  <div>Inflate tires queue: {{que.inflate_tires|length}}</div>
+  <div>Get diagnostic queue: {{que.diagnostic|length}}</div>
+
+  <form method="post">{% csrf_token %}
+    <button type="submit">Process next</button>
+  </form>
+{% endblock %}
